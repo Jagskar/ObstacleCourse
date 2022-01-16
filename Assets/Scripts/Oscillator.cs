@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class Oscillator : MonoBehaviour
 {
-    [SerializeField]
-    float speed = 0.01f;
-
+    float speed = 0.5f;
     float phase = 0;
     float phaseDirection = 1;
-    Vector3 pointA = new Vector3(14f, 0.57f, 0f);
-    Vector3 pointB = new Vector3(-14f, 0.57f, 0f);
+    Vector3 pointA = new Vector3(29f, 1.14f, 0f);
+    Vector3 pointB = new Vector3(-29f, 1.14f, 0f);
 
     // Update is called once per frame
     void Update()
