@@ -11,16 +11,16 @@ public class Mover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        PrintInstructions();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Go();
+        MovePlayerCharacter();
     }
 
-    void Go()
+    void MovePlayerCharacter()
     {
         // Use deltaTime to calculate how long one frame runs for 
         float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
@@ -28,5 +28,12 @@ public class Mover : MonoBehaviour
 
         // Access transform of GameObject this script is attached to
         transform.Translate(xValue, yTransform, zValue);
+    }
+
+    void PrintInstructions()
+    {
+        Debug.Log("Welcome to the game.");
+        Debug.Log("Use WASD keys to move.");
+        Debug.Log("Avoid the moving obstacle in the middle.");
     }
 }
