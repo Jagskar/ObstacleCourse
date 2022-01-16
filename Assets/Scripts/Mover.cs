@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
-    //[SerializeField]
-    //float xTransform = 0.01f;
+    [SerializeField]
+    float moveSpeed = 10f;
     const float yTransform = 0f;
-    //[SerializeField]
-    //float zTransform = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,10 +22,11 @@ public class Mover : MonoBehaviour
 
     void Go()
     {
-        float xValue = Input.GetAxis("Horizontal");
-        float zValue = Input.GetAxis("Vertical");
+        // Use deltaTime to calculate how long one frame runs for 
+        float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
+        float zValue = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
 
         // Access transform of GameObject this script is attached to
-        transform.Translate(xValue * 0.1f, yTransform, zValue * 0.1f);
+        transform.Translate(xValue, yTransform, zValue);
     }
 }
