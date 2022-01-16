@@ -7,8 +7,8 @@ public class Oscillator : MonoBehaviour
     float speed = 0.5f;
     float phase = 0;
     float phaseDirection = 1;
-    Vector3 pointA = new Vector3(29f, 1.14f, 0f);
-    Vector3 pointB = new Vector3(-29f, 1.14f, 0f);
+    Vector3 pointA = new Vector3(29f, 1.14f, -6f);
+    Vector3 pointB = new Vector3(-29f, 1.14f, -6f);
 
     // Update is called once per frame
     void Update()
